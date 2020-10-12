@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
+
+	<ImageView
+		android:id="@+id/addVideoLeftBtn"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:src="@drawable/ic_add_media"
+		android:scaleType="centerInside"
+		android:layout_marginTop="15dp"
+		android:layout_marginStart="5dp"
+		android:layout_marginEnd="5dp"
+		/>
+
+	<ImageView
+		android:id="@+id/videoCover"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:src="@drawable/icon_register_user_icon"
+		android:layout_toEndOf="@id/addVideoLeftBtn"
+		android:background="@drawable/bg_video_item"
+		android:scaleType="fitXY"
+		android:padding="4dp"/>
+
+	<ImageView
+		android:id="@+id/addVideoRightBtn"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:src="@drawable/ic_add_media"
+		android:scaleType="centerInside"
+		android:layout_marginTop="15dp"
+		android:layout_marginStart="5dp"
+		android:layout_marginEnd="5dp"
+		android:layout_toEndOf="@id/videoCover"/>
+
+	<TextView
+		android:id="@+id/videoDuration"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		tools:text="00:00"
+		android:textSize="11sp"
+		android:layout_below="@id/videoCover"
+		android:layout_alignEnd="@id/videoCover"
+		android:layout_marginEnd="5dp"
+		android:textColor="#666666"/>
+
+	<TextView
+		android:id="@+id/videoIndexText"
+		android:layout_width="15dp"
+		android:layout_height="15dp"
+		android:background="#80000000"
+		android:textColor="@color/white"
+		android:gravity="center"
+		android:textSize="11sp"
+		android:layout_alignTop="@id/videoCover"
+		android:layout_alignStart="@id/videoCover"
+		android:layout_margin="5dp"
+		/>
+</RelativeLayout>

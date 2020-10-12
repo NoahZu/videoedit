@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white">
+
+	<FrameLayout
+		android:id="@+id/titleCanvasLayout"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toTopOf="@id/titleMenuLayout"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		android:background="#BB000000"
+		android:layout_centerHorizontal="true"
+		>
+
+		<EditText
+			android:id="@+id/titleEdit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:background="@drawable/bg_edit_title"
+			android:padding="20dp"
+			android:text="@string/tap_input_title"
+			android:hint="@string/tap_input_title"
+			android:textColor="@color/white"
+			android:textColorHint="@color/white"
+			android:textSize="20sp"
+			android:gravity="center"
+			/>
+	</FrameLayout>
+
+	<androidx.constraintlayout.helper.widget.Flow
+		android:id="@+id/titleMenuLayout"
+		android:layout_width="match_parent"
+		android:layout_height="230dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:constraint_referenced_ids="backColorMenuLayout,colorMenuLayout,timeMenuLayout"/>
+
+
+	<LinearLayout
+		android:id="@+id/backColorMenuLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		>
+
+		<io.github.noahzu.videoedit.widget.ColorRoundImageView
+			android:id="@+id/backRadio1"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			app:fill_color="#ff436fc4"
+			android:scaleType="centerInside"/>
+
+		<io.github.noahzu.videoedit.widget.ColorRoundImageView
+			android:id="@+id/backRadio2"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			app:fill_color="#BB000000"
+			android:layout_marginStart="10dp"
+			android:layout_marginEnd="10dp"
+			android:src="@drawable/ic_checked"
+			android:scaleType="centerInside"/>
+
+		<io.github.noahzu.videoedit.widget.ColorRoundImageView
+			android:id="@+id/backRadio3"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			app:fill_color="#ffdb8484"
+			android:scaleType="centerInside"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/colorMenuLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toStartOf="@id/backColorMenuLayout"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		>
+
+		<io.github.noahzu.videoedit.widget.ColorRoundImageView
+			android:id="@+id/colorRadio1"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			app:fill_color="#ff83a8f0"
+			android:scaleType="centerInside"/>
+
+		<io.github.noahzu.videoedit.widget.ColorRoundImageView
+			android:id="@+id/colorRadio2"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			app:fill_color="#ffffff"
+			app:stroke_color="@color/color_black5"
+			android:src="@drawable/ic_checked"
+			android:layout_marginStart="10dp"
+			android:layout_marginEnd="10dp"
+			android:scaleType="centerInside"/>
+
+		<io.github.noahzu.videoedit.widget.ColorRoundImageView
+			android:id="@+id/colorRadio3"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			app:fill_color="#fffe5a57"
+			android:scaleType="centerInside"/>
+	</LinearLayout>
+
+	<RadioGroup
+		android:id="@+id/timeMenuLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/backColorMenuLayout"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		>
+
+		<RadioButton
+			android:id="@+id/timeRadio1"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			android:button="@null"
+			android:background="@drawable/bg_select_title_time"
+			android:text="@string/time_one_second"
+			android:textColor="@color/color_black"
+			android:gravity="center"/>
+
+		<RadioButton
+			android:id="@+id/timeRadio3"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			android:button="@null"
+			android:background="@drawable/bg_select_title_time"
+			android:layout_marginStart="10dp"
+			android:layout_marginEnd="10dp"
+			android:text="@string/time_three_second"
+			android:textColor="@color/white"
+			android:checked="true"
+			android:gravity="center"/>
+
+		<RadioButton
+			android:id="@+id/timeRadio5"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			android:button="@null"
+			android:background="@drawable/bg_select_title_time"
+			android:text="@string/time_five_second"
+			android:textColor="@color/color_black"
+			android:gravity="center"/>
+	</RadioGroup>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/text_color"
+		app:layout_constraintTop_toBottomOf="@id/colorMenuLayout"
+		app:layout_constraintStart_toStartOf="@id/colorMenuLayout"
+		app:layout_constraintEnd_toEndOf="@id/colorMenuLayout"
+		android:layout_marginTop="10dp"
+		android:textColor="@color/color_black"
+		android:textSize="13sp"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/background_color"
+		app:layout_constraintTop_toBottomOf="@id/backColorMenuLayout"
+		app:layout_constraintStart_toStartOf="@id/backColorMenuLayout"
+		app:layout_constraintEnd_toEndOf="@id/backColorMenuLayout"
+		android:layout_marginTop="10dp"
+		android:textColor="@color/color_black"
+		android:textSize="13sp"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/time_setting"
+		app:layout_constraintTop_toBottomOf="@id/timeMenuLayout"
+		app:layout_constraintStart_toStartOf="@id/timeMenuLayout"
+		app:layout_constraintEnd_toEndOf="@id/timeMenuLayout"
+		android:layout_marginTop="10dp"
+		android:textColor="@color/color_black"
+		android:textSize="13sp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

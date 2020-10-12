@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg">
+
+	<TextView
+		android:id="@+id/hintText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/long_press_drag_sort"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="10dp"/>
+
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/videoListView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/hintText"
+		android:layout_marginTop="15dp"
+		android:layout_marginStart="20dp"
+		android:layout_marginEnd="20dp"/>
+
+</RelativeLayout>

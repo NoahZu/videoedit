@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="230dp">
+
+	<TextView
+		android:id="@+id/durationText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		tools:text="59s"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintBottom_toTopOf="@id/videoTimeLineView"
+		android:layout_marginBottom="10dp"
+		android:layout_marginEnd="13dp"
+		android:textSize="11sp"
+		/>
+
+	<TextView
+		android:id="@+id/slideText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		tools:text="59s"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintBottom_toTopOf="@id/videoTimeLineView"
+		android:layout_marginBottom="10dp"
+		android:layout_marginStart="13dp"
+		android:textSize="11sp"
+		/>
+
+
+	<com.haoqi.teacher.videoedit.widget.timeline.TimeLineViewGroup
+		android:id="@+id/videoTimeLineView"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_marginStart="13dp"
+		android:layout_marginEnd="13dp"
+		android:layout_marginTop="46dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+	<com.haoqi.teacher.videoedit.widget.RangeSeekBar
+		android:id="@+id/rangeSeekBar"
+		android:layout_width="match_parent"
+		android:layout_height="58dp"
+		android:layout_marginStart="13dp"
+		android:layout_marginEnd="13dp"
+		android:paddingTop="2dp"
+		android:paddingBottom="2dp"
+		app:layout_constraintStart_toStartOf="@id/videoTimeLineView"
+		app:layout_constraintEnd_toEndOf="@id/videoTimeLineView"
+		app:layout_constraintTop_toTopOf="@id/videoTimeLineView"
+		app:layout_constraintBottom_toBottomOf="@id/videoTimeLineView"/>
+
+	<TextView
+		android:id="@+id/cuttedDurationText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintBottom_toTopOf="@id/videoTimeLineView"
+		android:layout_marginBottom="10dp"
+		tools:text="36s"
+		android:textColor="@color/color_black"
+		android:textSize="13sp"
+		/>
+
+	<androidx.constraintlayout.helper.widget.Flow
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:constraint_referenced_ids="btnDeleteSelect,btnSaveSelect,btnResetSelect"
+		android:layout_marginBottom="30dp"
+		/>
+
+	<TextView
+		android:id="@+id/btnDeleteSelect"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:drawableTop="@drawable/ic_delete_select"
+		android:text="@string/delete_select"
+		android:textStyle="bold"
+		tools:ignore="MissingConstraints"
+		android:textSize="13sp"
+		android:textColor="@color/color_black"
+		android:gravity="center"/>
+
+	<TextView
+		android:id="@+id/btnSaveSelect"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:drawableTop="@drawable/ic_save_select"
+		android:text="@string/save_select"
+		android:textStyle="bold"
+		tools:ignore="MissingConstraints"
+		android:textSize="13sp"
+		android:textColor="@color/color_black"
+		android:gravity="center"/>
+
+	<TextView
+		android:id="@+id/btnResetSelect"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:drawableTop="@drawable/ic_reset"
+		android:text="@string/reset_select"
+		android:textStyle="bold"
+		tools:ignore="MissingConstraints"
+		android:textSize="13sp"
+		android:textColor="@color/color_black"
+		android:gravity="center"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:tools="http://schemas.android.com/tools"
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/white">
+
+	<TextView
+		android:id="@+id/markerTitleText"
+		android:layout_width="wrap_content"
+		android:layout_height="50dp"
+		android:text="@string/water_marker"
+		android:gravity="start|center_vertical"
+		android:paddingStart="15dp"
+		android:paddingEnd="15dp"
+		android:textSize="16sp"
+		android:textColor="@color/color_black"
+		/>
+
+	<TextView
+		android:id="@+id/markerTitleContent"
+		android:layout_width="wrap_content"
+		android:layout_height="50dp"
+		android:layout_toEndOf="@id/markerTitleText"
+		android:gravity="center_vertical|end"
+		android:paddingStart="15dp"
+		android:paddingEnd="15dp"
+		android:maxLines="2"/>
+
+	<io.github.noahzu.videoedit.widget.MySwitchButton
+		android:id="@+id/markerSwitchBtn"
+		android:layout_width="35dp"
+		android:layout_height="20dp"
+		android:layout_alignParentEnd="true"
+		android:layout_marginTop="15dp"
+		android:layout_marginEnd="15dp"
+		tools:ignore="RelativeOverlap"/>
+
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:background="@color/color_background"
+		android:layout_below="@id/markerTitleText"
+		android:layout_alignParentBottom="true"
+		/>
+
+
+	<TextView
+		android:id="@+id/rangeHintText"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/select_apply_range"
+		android:textSize="11sp"
+		android:background="@color/color_background"
+		android:paddingTop="10dp"
+		android:paddingBottom="5dp"
+		android:layout_below="@id/markerTitleText"
+		android:paddingStart="15dp"
+		android:paddingEnd="15dp"
+		/>
+
+
+	<TextView
+		android:id="@+id/hintApplyCurrentText"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:text="@string/apply_current_video_clip"
+		android:gravity="start|center_vertical"
+		android:paddingStart="15dp"
+		android:paddingEnd="0dp"
+		android:layout_below="@id/rangeHintText"
+		android:textColor="@color/color_black"
+		android:textSize="16sp"
+		android:background="@color/white"
+		/>
+
+	<View
+		android:id="@+id/dividerLine"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="@color/live_class_divider"
+		android:layout_below="@id/hintApplyCurrentText"
+		android:layout_marginStart="15dp"
+		android:layout_marginEnd="15dp"/>
+
+	<TextView
+		android:id="@+id/hintApplyAllText"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:text="@string/apply_current_all_video"
+		android:gravity="start|center_vertical"
+		android:paddingStart="15dp"
+		android:paddingEnd="0dp"
+		android:layout_below="@id/dividerLine"
+		android:textColor="@color/color_black"
+		android:textSize="16sp"
+		android:background="@color/white"
+		/>
+
+	<RadioGroup
+		android:id="@+id/selectApplyRadioGroup"
+		android:layout_width="wrap_content"
+		android:layout_height="100dp"
+		android:layout_alignParentEnd="true"
+		android:orientation="vertical"
+		android:layout_alignTop="@id/hintApplyCurrentText"
+		android:paddingEnd="10dp"
+		android:paddingStart="10dp">
+
+		<RadioButton
+			android:id="@+id/applyCurrentRadio"
+			android:layout_width="wrap_content"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:checked="true"
+			style="@style/radio_btn"/>
+
+		<RadioButton
+			android:id="@+id/applyAllRadio"
+			android:layout_width="wrap_content"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			style="@style/radio_btn"/>
+	</RadioGroup>
+
+</RelativeLayout>
