@@ -17,7 +17,7 @@
 
 	<ImageButton
 		android:id="@+id/titleBackBtn"
-		android:layout_width="45dp"
+		android:layout_width="wrap_content"
 		android:layout_height="45dp"
 		android:src="@drawable/btn_back"
 		android:background="@android:color/transparent"
