@@ -13,6 +13,8 @@ import io.github.noahzu.videoedit.R
 import io.github.noahzu.videoedit.base.ToastUtils
 import io.github.noahzu.videoedit.ext.adjustHeight
 import io.github.noahzu.videoedit.ext.adjustWidth
+import io.github.noahzu.videoedit.ext.beGone
+import io.github.noahzu.videoedit.ext.beVisible
 import io.github.noahzu.videoedit.utils.FileUtils
 import io.github.noahzu.videoedit.utils.KeyboardChangeListener
 import io.github.noahzu.videoedit.utils.KeyboardUtil
@@ -28,10 +30,6 @@ class TitleInputEditMenuPanel : EditMenuPanel {
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
     override fun layoutId(): Int = R.layout.view_edit_video_title_input_menu
-//    private val progressDialog by lazy {
-//        CustomLoadingDialog.Builder(context).setCancelOutside(false).setCancelable(false).setMessage("生成标题中...")
-//            .create()
-//    }
     private var timeCheckedBtn = timeRadio3
     private lateinit var keybardListener: KeyboardChangeListener
 
@@ -119,7 +117,7 @@ class TitleInputEditMenuPanel : EditMenuPanel {
     }
 
     private fun generateVideo() {
-//        progressDialog.show()
+        loadingProgress.beVisible()
         val bitmap = Bitmap.createBitmap(titleCanvasLayout.width, titleCanvasLayout.height, Bitmap.Config.RGB_565)
         titleCanvasLayout.draw(Canvas(bitmap))
         val picPath = FileUtils.saveBitmapToLocal(bitmap)
@@ -135,7 +133,7 @@ class TitleInputEditMenuPanel : EditMenuPanel {
 
                 override fun onSuccess(file: File?) {
                     post {
-//                        progressDialog.dismiss()
+                        loadingProgress.beGone()
                         closeEditAction()
                         videoMenuControlManager.onEndTitleInput(false, file)
                     }

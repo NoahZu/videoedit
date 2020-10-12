@@ -22,4 +22,5 @@
     <color name="color_black4">#999EA3</color>
     <color name="btn_gray_normal">@color/color_black4</color>
     <color name="btn_gray_press">@color/color_black3</color>
+    <color name="color_white">#FFFFFF</color>
 </resources>

@@ -36,4 +36,17 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
 
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/color_background</item>
+        <!--注意必须透明，否者滑动返回会有黑屏-->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="DialogStyle" parent="AppThemeLight">
+        <item name="colorPrimary">@color/color_black</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorSecondary">@android:color/darker_gray</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
 </resources>

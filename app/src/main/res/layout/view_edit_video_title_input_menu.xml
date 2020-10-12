@@ -195,4 +195,30 @@
 		android:textSize="13sp"/>
 
 
+	<LinearLayout
+		android:id="@+id/loadingProgress"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		android:orientation="vertical"
+		android:visibility="gone">
+
+		<ProgressBar
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="生成标题中..."
+			android:textColor="@color/color_white"/>
+
+	</LinearLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
