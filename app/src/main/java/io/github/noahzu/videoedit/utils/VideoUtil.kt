@@ -24,7 +24,7 @@ object VideoUtil {
 
         try {
             val mediaMetadataRetriever = MediaMetadataRetriever()
-            mediaMetadataRetriever.setDataSource(context, videoPath)
+            mediaMetadataRetriever.setDataSource(videoPath.toString(), HashMap<String, String>())
 
             val path = videoPath.path
             val duration = mediaMetadataRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)?.toLong()?:0
