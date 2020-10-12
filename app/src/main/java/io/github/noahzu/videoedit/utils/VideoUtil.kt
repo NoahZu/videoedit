@@ -8,6 +8,7 @@ import android.media.MediaFormat
 import android.media.MediaMetadataRetriever
 import android.net.Uri
 import android.util.Log
+import io.github.noahzu.videoedit.VideoEditApplication
 import java.io.File
 
 object VideoUtil {
@@ -24,7 +25,7 @@ object VideoUtil {
 
         try {
             val mediaMetadataRetriever = MediaMetadataRetriever()
-            mediaMetadataRetriever.setDataSource(videoPath.toString(), HashMap<String, String>())
+            mediaMetadataRetriever.setDataSource(VideoEditApplication.getAppContext(),videoPath)
 
             val path = videoPath.path
             val duration = mediaMetadataRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)?.toLong()?:0
